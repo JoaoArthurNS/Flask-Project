@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static',    filename='css/index.css') }}">
+    <title>Document</title>
+</head>
+<body>
+
+   <div class="background">
+             <header>
+                <div class="logo">
+                    <img src="../static/fumaçaroxa-removebg-preview.png" alt="" id="img-purple">
+                    <a href="" class="mn"><h3 class="air">Air Force</h3></a>
+                </div>
+                     {% if current_user.is_authenticated %}
+                        <ul id="menu">
+                            <a href="{{ url_for('index') }}" class="mn"><li> Início</li></a>
+                            <a href="{{ url_for('lista_produtos') }}" class="mn"><li>Produtos</li></a>
+                            <a href="{{ url_for('cadastro_produtos') }}" class="mn"><li>Cadastrar Produto</li></a>
+                            <a href="{{ url_for('sair') }}" class="mn"><li>Sair</li></a>
+                        </ul>
+                    {% endif %}
+             </header>
+       <div class="containerflash">
+            {% with mensagens = get_flashed_messages(with_categories=True) %}
+                {% if mensagens %}
+                    {% for categoria, mensagem in mensagens %}
+                        <div class="{{ categoria }}">
+                            {{ mensagem }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+        </div>
+    <main>
+        <div class="container">
+            <div class="titulo">
+
+               <span><h1 id="welcome"> Welcome to the </h1></span>
+                 <h1 id="purple">purple</h1>
+                 <h1 id="future"> future</h1>
+            </div>
+         </div>
+         <div class="circulo">
+                    <div class="front">
+                        <img src="../static/nike2-removebg-preview.png" alt="" class="imagem-um ">
+                    </div>
+         </div>
+
+    </main>
+   </div>
+
+    <div class="caixa">
+        <section class="main-dois">
+            <h1 class="div-um">THE FUTURE IS </h1>
+            <h1 class="div-dois">RIGHT <a href="" class="here"> <span class="here"> HERE.</span></a></h1>
+        </section>
+        <div id="seta"></div>
+     </div>
+
+     <div class="produtos">
+        <div class="container-card">
+            <div class="card">
+                <div class="content">
+                    <h2 class="h2-card"> 01</h2>
+                    <h3 class="card-titulo">U$ 799,90</h3>
+                    Air Force White
+                    <p>
+                        <img src="../static/nike2-removebg-preview.png" alt="" class="img-card">
+                    </p>
+                    <a href="#" class="mais">Mais Informaçoes</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="content">
+                    <h2 class="h2-card"> 02</h2>
+                    <h3 class="card-titulo">U$960,00</h3>
+                    Air Force all purple
+                    <p>
+                        <img src="../static/nike_roxo4-removebg-preview.png" alt="" class="img-card-um">
+                    </p>
+                    <a href="#" class="mais">Mais Informaçoes</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="content">
+                    <h2 class="h2-card"> 03</h2>
+                    <h3 class="card-titulo">U$1.500,00</h3>
+                    Nike Air 03
+                    <p>
+                        <img src="../static/nike1-removebg-preview.png" alt="" class="img-card-dois">
+                    </p>
+                    <a href="#" class="mais">Mais Informaçoes</a>
+                </div>
+            </div>
+        </div>
+     </div>
+     <div class="slideshow">
+        <div class="planeta">
+            <div id="planeta-dois"></div>
+
+        </div>
+     </div>
+
+     <div id="contact">
+        <div class="titulo-contact">
+            <h1 class="contact-um">Faça o seu contato conosco</h1>
+       </div>
+        <div class="botao">
+        <a href="formulario.html"> <button class="btn" type="submit">Click here</button></a>
+     </div>
+    </div>
+
+         <script type="text/javascript" src="{{ url_for('static',    filename='js/vanilla-tilt.js') }}"></script>
+         <script>
+            VanillaTilt.init(document.querySelectorAll(".card"), {
+                max: 25,
+                speed: 400,
+                glare: true,
+                "max-glare":0.5
+            });
+         </script>
+   <footer>
+    <div class="footer-content" >
+
+        <h3>Air Force</h3>
+        <p>The purple world all for you. Enjoy it!The aesthetic force will return</p>
+        <ul class="socials">
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Shoes</a></li>
+          <li><a href="#">Category</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+
+     </div>
+
+     <ul class="socials-dois">
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Twitter</a></li>
+      </ul>
+
+   </footer>
+        <p class="copy"> &copy; Copyright 2022, Isabella Souza. All Rights Reserved</p>
+
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{{ url_for('static',    filename='css/cadastro_produtos.css') }}">
+</head>
+<body>
+    <div class="containerflash">
+            {% with mensagens = get_flashed_messages(with_categories=True) %}
+                {% if mensagens %}
+                    {% for categoria, mensagem in mensagens %}
+                        <div class="{{ categoria }}">
+                            {{ mensagem }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+        </div>
+    <div class="background">
+        <header>
+            <div class="logo">
+                <img src="../static/fumaçaroxa-removebg-preview.png" alt="" id="img-purple">
+                <a href="" class="mn"><h3 class="air">Air Force</h3></a>
+            </div>
+            {% if current_user.is_authenticated %}
+                <ul id="menu">
+                    <a href="{{ url_for('index') }}" class="mn"><li> Início</li></a>
+                    <a href="{{ url_for('lista_produtos') }}" class="mn"><li>Produtos</li></a>
+                    <a href="{{ url_for('cadastro_produtos') }}" class="mn"><li>Cadastrar Produto</li></a>
+                    <a href="{{ url_for('sair') }}" class="mn"><li>Sair</li></a>
+                </ul>
+            {% endif %}
+        </header>
+    </div>
+        <h1>Produtos</h1>
+        <div class="dashboardProduto">
+        <!--Toda a lógica de mostrar os produtos vai aqui, exluir e etc-->
+        <table class="tableDashboard" overflow="scroll">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Modelo</th>
+                    <th>Marca</th>
+                    <th>Preço</th>
+                    <th>Estoque</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in produtos %}
+                    <tr data-href="#">
+                        <td>{{ item.id }}</td>
+                        <td>{{ item.modelo }}</td>
+                        <td>{{ item.marca }}</td>
+                        <td>{{ item.preco }}</td>
+                        <td>{{ item.estoque }}</td>
+                        <td><a class="btn-danger" href="{{ url_for('lista_produtos') }}/{{ item.id }}">Excluir</a></td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    {% if produtoId != undefined %}
+            <div class="modal-fade" id="modal-exc" role="dialog">
+                   <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title">Confirmação</h4>
+
+                            </div>
+                            <div class="modal-body">
+                                <p>Excluir Produto?</p>
+                            </div>
+                            <div class="modal-footer">
+                                <a class="btn-primary" href="{{ url_for('remover_produto', id=produtoId.id) }}">Excluir</a>
+                                <a class="btn-primary" href="{{ url_for('lista_produtos') }}">Cancelar</a>
+                            </div>
+                        </div>
+                   </div>
+            </div>
+        {% endif %}
+        <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('#modal-exc').modal('show');
+            });
+        </script>
+</body>
+</html>

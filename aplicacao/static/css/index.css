@@ -1,0 +1,407 @@
+@import url('https://fonts.googleapis.com/css2? family= Ms+Madi & display=swap');
+@import url('https://fonts.googleapis.com/css2? family= Indie+Flor & display=swap');
+@import url('https://fonts.googleapis.com/css2? family= Tangerine & display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Qwitcher+Grypen:wght@700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.background{
+    position: relative;
+    min-height: 700px;
+    background-image: url(../../static/closeup-shot-of-colorful-ink-explosion-on-a-white-surface.jpg);
+    background-size: cover;
+    background-position: center;
+    box-shadow:  0 4px 30px rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+header{
+    height: 60px;
+    background-color: rgba(129, 121, 141, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5) ;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+}
+
+ul{
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    margin-left: 100px;
+    list-style: none;
+}
+
+.mn:hover{
+    padding: 12px 20px;
+    background-color: rgb(190, 132, 243);
+    border-radius: 15px;
+    transition: 0.5s;
+}
+
+.mn{
+    text-decoration: none;
+    color: white;
+}
+
+#img-purple{
+    height: 50px;
+
+}
+.logo{
+    color: white;
+    font-family: 'Qwitcher Grypen', cursive;
+    font-size: 30px;
+    display: flex;
+}
+
+
+.air{
+    padding: 5px;
+}
+
+.alert-success{
+    padding: 10px;
+    height: 50px;
+    text-align: center;
+    font-size: bold;
+    font-size: 17px;
+    color: rgb(255, 255, 255);
+    background: rgba(11, 216, 55, 0.603);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.alert-danger{
+    padding: 10px;
+    height: 50px;
+    text-align: center;
+    font-size: bold;
+    font-size: 17px;
+    color: rgb(255, 255, 255);
+    background: rgba(216, 11, 11, 0.637);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#welcome{
+    color: rgb(255, 255, 255);
+    font-size: 60px;
+    position: absolute;
+    bottom: 350px;
+    left:140px;
+}
+
+#future{
+    color: rgb(255, 255, 255);
+    font-size: 60px;
+    position: absolute;
+    bottom: 350px;
+    left:140px;
+}
+
+#purple{
+    font-size: 100px;
+    position: absolute;
+    bottom: 285px;
+    left:150px;
+    font-family: 'Qwitcher Grypen', cursive;
+    color: rgb(120, 89, 141);
+    text-shadow: 1px 1px rgb(243, 239, 239), -1px -1px rgb(61, 60, 61);
+
+}
+
+#future{
+    position: absolute;
+    bottom: 300px;
+    left:340px;
+}
+
+.circulo{
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background-color: rgba(241, 234, 241, 0.5);
+    box-shadow:  0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    float: right;
+    position: absolute;
+    right: 100px;
+    bottom: 130px;
+}
+
+.imagem-um{
+    position: absolute;
+    top: 100px;
+    width: 400px;
+    border-radius: 50%;
+    transition: all 5s ease-in-out;
+}
+
+.imagem-um:hover{
+    transform: rotate(360deg);
+}
+
+.caixa{
+    min-height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    background-color: rgb(255, 255, 255);
+
+}
+
+.div-um{
+    font-size: 100px;
+    color: rgba(195, 193, 197, 0.836);
+    text-shadow: 1px 1px rgb(243, 239, 239), -1px -1px rgb(75, 66, 75);
+}
+
+.div-dois{
+    font-size: 100px;
+    position: relative;
+    left: 50px;
+    color: rgba(195, 193, 197, 0.836);
+    text-shadow: 1px 1px rgb(243, 239, 239), -1px -1px rgb(75, 66, 75);
+}
+
+.here{
+    color: rgb(101, 40, 158);
+    text-decoration: none;
+    font-family: 'Indie Flower', cursive;
+}
+
+a .here:hover{
+    transition: 0.5s;
+    text-shadow: 0 0 10px rgb(25, 1, 26);
+}
+
+#seta{
+  position: absolute;
+  margin-top: 400px;
+  padding: 20px;
+  box-shadow: 2px -2px 0 1px rgb(91, 32, 150) inset;
+  border: solid transparent;
+  border-width: 0 0 2px 2px;
+  transform: rotate(-45deg);
+}
+
+.produtos{
+    position: relative;
+    min-height: 700px;
+    background-image: url(../../static/photoshop-2.png);
+    background-size: cover;
+    background-position: center;
+    box-shadow:  0 4px 30px rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container-card{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    z-index: 1;
+}
+.card{
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(252, 252, 252);
+    text-align: center;
+
+}
+
+
+.container-card .card{
+    position: relative;
+    width: 280px;
+    height: 400px;
+    margin: 60px;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.9);
+    border-radius: 15px;
+    background: rgba(114, 96, 131, 0.5);
+    overflow: hidden;
+    border-top: 1px solid rgba(195, 193, 197, 0.5);
+    border-left: 1px solid rgba(195, 193, 197, 0.5) ;
+}
+
+.mais{
+    text-decoration: none;
+    color: white;
+}
+
+.mais:hover{
+    color: rgb(206, 22, 212);
+}
+
+.container-card .card .content{
+    transform: translateY(180px);
+    opacity: 0;
+    transition: 0.5s;
+
+}
+
+.container-card .card:hover .content{
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.img-card{
+    width: 300px;
+    height: 150px;
+}
+.img-card-um{
+    width: 200px;
+    height: 140px;
+}
+.img-card-dois{
+    width: 300px;
+    height: 150px;
+}
+
+.container-card .card:hover .content .h2-card{
+    position: absolute;
+    display: inline-block;
+    top: -90px;
+    right: 30px;
+    font-size: 50px;
+    color: rgba(195, 193, 197, 0.5);
+    pointer-events: none;
+}
+
+
+.slideshow{
+    min-height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items:center ;
+
+}
+
+#planeta-dois{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+    background-image: url(../../static/mapa-de-mundo-branco-isolado-no-roxo-13376213.png);
+    border-radius: 50%;
+    background-size: cover;
+    box-shadow: -20px -20px 50px 2px #000 inset, 0 0 20px 2px #000 ;
+    animation: spin 15s linear alternate infinite;
+}
+
+
+
+#contact{
+    background-image: url(../../static/chuvacaindo.gif);
+    min-height:700px ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    box-shadow: 0 0px 30px rgba(0, 0, 0, 1.0);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.titulo-contact{
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    width: 100%;
+    margin-top: 260px;
+    font-size: 25px;
+}
+
+.btn{
+    width: 100%;
+    padding: 0 20px;
+    margin-bottom: 320px;
+    height: 30px;
+    border-radius:  5px;
+    background-color: rgb(159, 116, 199);
+    color: white;
+    border: none;
+
+}
+
+.btn:hover{
+    background-color: rgb(50, 28, 63);
+}
+
+
+@keyframes spin{
+    100%{background-position: 100%;}
+}
+
+footer{
+    height: auto;
+    width: 100vw;
+    padding-top: 40px ;
+    color: rgb(89, 37, 138);
+}
+
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 20px;
+    font-size: 14px;
+    color: #000;
+}
+
+.socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 10px auto;
+
+}
+
+.socials li{
+    margin: 10px;
+}
+
+.socials a{
+    text-decoration: none;
+}
+
+.copy{
+    margin-top: 30px;
+}
+
+.socials-dois{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 10px auto;
+
+}

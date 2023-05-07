@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(../background-login.png);
+    background-color: rgb(191, 133, 245);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container{
+    max-width: 500px;
+    width: 70%;
+    padding: 20px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background: rgba(205, 101, 236, 0.4);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+form h3{
+    text-align: center;
+    font-family: 'Anton', sans-serif;
+    color: rgb(84, 2, 100);
+    margin-bottom: 20px;
+}
+
+#campo{
+    font-family: 'Anton', sans-serif;
+    color: rgb(84, 2, 100);
+}
+
+.alert-success{
+    padding: 10px;
+    height: 50px;
+    text-align: center;
+    font-size: bold;
+    font-size: 17px;
+    color: rgb(255, 255, 255);
+    background: rgba(11, 216, 55, 0.603);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.alert-danger{
+    padding: 10px;
+    height: 50px;
+    text-align: center;
+    font-size: bold;
+    font-size: 17px;
+    color: rgb(255, 255, 255);
+    background: rgba(216, 11, 11, 0.637);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+form input[type=text], form input[type=password]{
+    width: 100%;
+    height: 45px;
+    border-radius: 10px;
+    border: 0.5px solid rgb(161, 105, 194);
+    padding-left: 10px;
+    margin: 10px 0;
+    outline: none;
+    background-color: rgb(235, 207, 252) ;
+}
+
+form input[type=submit]{
+    width: 100%;
+    height: 30px;
+    cursor: pointer;
+    border: 0;
+    border-radius: 20px;
+}
+
+form input[type=submit]:hover{
+    color: white;
+    background-color: rgb(41, 4, 77);
+}
+
+
+hr{
+    margin-left: 90px;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    width: 60%;
+}
+
+p{
+    text-align: center;
+}
+
+a{
+    color: rgb(47, 0, 92);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:hover{
+    color: rgb(243, 238, 247);
+}

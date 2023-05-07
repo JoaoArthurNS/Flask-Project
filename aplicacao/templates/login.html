@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static',    filename='css/login.css') }}">
+    <title>Login</title>
+</head>
+<body>
+     <div class="containerflash">
+            {% with mensagens = get_flashed_messages(with_categories=True) %}
+                {% if mensagens %}
+                    {% for categoria, mensagem in mensagens %}
+                        <div class="{{ categoria }}">
+                            {{ mensagem }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+        </div>
+    <div class="container">
+        <div id="msgError"></div>
+    <form method="POST" action="">
+        {{ form.csrf_token }}
+        <h3> Login</h3>
+            {{ form.usuario.label(id="campo") }}
+            {{ form.usuario(class="form-control") }}
+            {{ form.senha.label(id="campo") }}
+            {{ form.senha(class="form-control") }}
+            {{ form.submit_entrar(class="btn btn-primary btn-block mb-4") }}
+        <div>
+            <hr>
+         </div>
+         <p>Não possui uma conta? Cadastre-se
+            <a href="{{ url_for('cadastro_usuario') }}">Aqui</a>
+         </p>
+     </form>
+    </div>
